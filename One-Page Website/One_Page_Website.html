@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Cats</title>
+		<script src="./JS/one_page_website.js" defer></script>
 		<link rel="stylesheet" href="./CSS/one_page_website.css">
 	</head>
 	<body>
@@ -68,21 +69,21 @@
 		<!-- IMAGE 1 -->
 		
 		<div align="center">
-			<img src="./images/cat_1.jpg" alt="Picture of cat with big eyes."><br> 
+			<img src="./images/cat_1.jpg" alt="Picture of cat with big eyes." onclick="openLightbox(); currentSlide(1)"><br> 
 			<p>Here is the first cat in our gallery.</p><br>
 		</div>	
 		<!-- END IMAGE 1 -->
 		
 		<!-- IMAGE 2 -->
 		<div align="center">
-			<img src="./images/cat_2.jpg" alt="Picture of cat with tongue out."><br>
+			<img src="./images/cat_2.jpg" alt="Picture of cat with tongue out." onclick="openLightbox(); currentSlide(2)"><br>
 			<p>Here is the second image in our gallery.</p><br>
 		</div>		
 		<!-- END IMAGE 2 -->	
 		
 		<!-- IMAGE 3 -->
 		<div align="center">
-			<img src="./images/cat_3.jpg" alt="Picture of cat laying down."><br>
+			<img src="./images/cat_3.jpg" alt="Picture of cat laying down." onclick="openLightbox(); currentSlide(3)"><br>
 			<p>Here is the third image in our gallery.<p><br>
 		</div>	
 		<!-- END IMAGE 3 -->
@@ -90,7 +91,55 @@
 		<div style="color:orange" align="center">
 			<h2>And that does it for the Gallery, thanks for viewing it!</h2>
 		</div>		
+
+		<!-- LIGHTBOX -->
+		<div id="myLightbox" class="modal">
+			<span class="close cursor" onclick="closeLightbox()">&times;</span>
+			<div class="modal-content">
+
+				<div class="mySlides">
+					<div class="numbertext">1 / 4</div>
+					<img src="./images/cat_1.jpg" style="width: 100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">2 / 4</div>
+					<img src="./images/cat_2.jpg" style="width: 100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">3 / 4</div>
+					<img src="./images/cat_3.jpg" style="width: 100%">
+				</div>
+
+				<!-- NEXT/PREVIOUS CONTROLS -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<!-- CAPTION TEXT -->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+
+				<!-- Thumbnail image controls -->
+				<div class="column">
+					<img class="Slide" src="./images/cat_1.jpg" onclick="currentSlide(1)" alt="Cat with big eyes">
+				</div>
+
+				<div class="column">
+					<img class="Slide" src="./images/cat_2.jpg" onclick="currentSlide(2)" alt="Cat with tongue out">
+				</div>
+				
+				<div class="column">
+					<img class="Slide" src="./images/cat_3.jpg" onclick="currentSlide(3)" alt="Cat laying down">
+				</div>
+			</div>
+		</div>
+
 		
+		<!-- END LIGHTBOX -->
+
+
 		<!-- END GALLERY -->
 		
 		
