@@ -11,6 +11,6 @@ This is a example of a Home page for a Movie theater that is styled using Bootst
 including but not limited to navbar, jumbotron, form, cards and dropdowns.
 
 ### Portfolio Website.
-This is my portfolio website styled with CSS. It includes a navbar, images, columns, a video and form.
+This was the first draft of my portfolio website styled with CSS. It includes a navbar, images, columns, a video and form.
 
 
